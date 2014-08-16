@@ -1,0 +1,4 @@
+FROM codenvy/jdk7_vnc
+RUN sudo apt-get update && sudo apt-get -y install curl
+RUN curl -L https://www.opscode.com/chef/install.sh | sudo bash
+ADD $app$/hello.rb /home/user/hello.rb
