@@ -1,57 +1,15 @@
-vi webserver.rb
-	package ‘apache2’
-
-chef-apply webserver.rb
-
-chef-apply webserver.rb
-
--------
-vi webserver.rb
-package 'apache2'
-
-service 'apache2' do
-  action [:start, :enable]
-end
-
--------
-chef-apply webserver.rb
-
--------
-vi webserver.rb
-package 'apache2'
-
-service 'apache2' do
-  action [:start, :enable]
-end
-
-file '/var/www/html/index.html' do
-  content '<html>
-  <body>
-    <h1>hello world</h1>
-  </body>
-</html>'
-end
-
--------
-chef-apply webserver.rb
-
-curl Localhost
-
-
-
--------
-
 echo -e "package 'apache2'" > webserver.rb
 
-
-
+chef-apply webserver.rb
+-------
 echo -e "package 'apache2'
 
 \nservice 'apache2' do
   \naction [:start, :enable]
 \nend" > webserver.rb
 
-
+chef-apply webserver.rb
+-------
 echo -e "package 'apache2'
 
 \nservice 'apache2' do
@@ -65,3 +23,8 @@ echo -e "package 'apache2'
   \n</body>
 \n</html>'
 \nend" > webserver.rb
+
+chef-apply webserver.rb
+-------
+curl Localhost
+
