@@ -1,6 +1,6 @@
 echo -e "package 'apache2'" > webserver.rb
 
-chef-apply webserver.rb
+sudo chef-apply webserver.rb
 -------
 echo -e "package 'apache2'
 
@@ -8,7 +8,7 @@ echo -e "package 'apache2'
   \naction [:start, :enable]
 \nend" > webserver.rb
 
-chef-apply webserver.rb
+sudo chef-apply webserver.rb
 -------
 echo -e "package 'apache2'
 
@@ -24,7 +24,7 @@ echo -e "package 'apache2'
 \n</html>'
 \nend" > webserver.rb
 
-chef-apply webserver.rb
+sudo chef-apply webserver.rb
 -------
 curl Localhost
 
