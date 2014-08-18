@@ -7,9 +7,9 @@ chef-apply webserver.rb
 
 -------
 vi webserver.rb
-package 'httpd'
+package 'apache2'
 
-service 'httpd' do
+service 'apache2' do
   action [:start, :enable]
 end
 
@@ -18,9 +18,9 @@ chef-apply webserver.rb
 
 -------
 vi webserver.rb
-package 'httpd'
+package 'apache2'
 
-service 'httpd' do
+service 'apache2' do
   action [:start, :enable]
 end
 
