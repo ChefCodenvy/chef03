@@ -1,3 +1,6 @@
+# Use the following commands to copy and paste into the terminal window.
+# Steps taken from http://learn.getchef.com/rhel/configure-a-package-and-service/
+
 echo -e "package 'apache2'" > webserver.rb
 
 sudo chef-apply webserver.rb
