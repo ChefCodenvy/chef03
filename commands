@@ -29,5 +29,5 @@ echo -e "package 'apache2'
 
 sudo chef-apply webserver.rb
 -------
-curl Localhost
+curl localhost #Or click on application URL to open a new tab
 
