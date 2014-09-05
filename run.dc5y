@@ -3,5 +3,6 @@ RUN sudo apt-get update && sudo apt-get -y install curl vim apache2
 RUN curl -L https://www.opscode.com/chef/install.sh | sudo bash
 #RUN sudo apt-get -y install rpm
 #RUN sudo rpm -Uvh chefdk-0.2.0-2.el6.x86_64.rpm --nodeps
-#ADD $app$/hello.rb /home/user/hello.rb
+ADD $app$/hello.rb /home/user/hello.rb
+EXPOSE 80
 EXPOSE 6080
